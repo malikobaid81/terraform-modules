@@ -35,3 +35,10 @@ module "security_group" {
   environment  = var.environment  # this can be given from vpc module or variables.tf of project
   vpc_id       = module.vpc.vpc_id
 }
+
+# Create ecs task execution role
+module "ecs_task_execution_role" {
+  source       = "../modules/ecs-task-execution-role"
+  project_name = module.vpc.project_name
+  environment  = module.vpc.environment
+}

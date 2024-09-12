@@ -7,7 +7,7 @@ variable "region" {
 variable "project_name" {
   type        = string
   description = "The name of the project, used to identify resources."
-  default     = "test"
+  default     = "modules"
 }
 
 variable "environment" {
